@@ -1,0 +1,31 @@
+body {
+    background: linear-gradient(180deg, #f2f6fb 0%, #eef3f8 100%);
+    min-height: 100vh;
+}
+
+.encabezado {
+    background: linear-gradient(135deg, #1f2937, #0f766e);
+}
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card {
+    border: 0;
+    border-radius: 0.75rem;
+}
+
+.card .h6 {
+    font-weight: 700;
+}
+
+#loginForm .form-control {
+    min-width: 170px;
+}
+
+@media (max-width: 991px) {
+    #loginForm .form-control {
+        min-width: auto;
+    }
+}

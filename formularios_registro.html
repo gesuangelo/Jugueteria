@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios de Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container py-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="h3 mb-0">Registros del Sistema</h1>
+            <a href="index.html" class="btn btn-outline-secondary">Volver al inicio</a>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h2 class="h5">Registro de Usuario</h2>
+                        <form action="procesar.php" method="POST" class="row g-2">
+                            <input type="hidden" name="tipo_entidad" value="usuario">
+                            <div class="col-12">
+                                <input type="text" class="form-control" name="nombre" placeholder="Nombre completo" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="email" class="form-control" name="email" placeholder="Correo electronico" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="password" class="form-control" name="password" placeholder="Contrasena" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control" name="direccion" placeholder="Direccion de envio" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control" name="telefono" placeholder="Telefono" required>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Registrar Usuario</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h2 class="h5">Registro de Juguete</h2>
+                        <form action="procesar.php" method="POST" class="row g-2">
+                            <input type="hidden" name="tipo_entidad" value="juguete">
+                            <div class="col-12">
+                                <input type="text" class="form-control" name="nombre_juguete" placeholder="Nombre del juguete" required>
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" name="descripcion" placeholder="Descripcion" required></textarea>
+                            </div>
+                            <div class="col-6">
+                                <input type="number" class="form-control" name="edad" placeholder="Edad recomendada" min="0" required>
+                            </div>
+                            <div class="col-6">
+                                <input type="number" class="form-control" step="0.01" min="0" name="precio" placeholder="Precio" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="number" class="form-control" name="inventario" placeholder="Cantidad en inventario" min="0" required>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-success">Registrar Juguete</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
